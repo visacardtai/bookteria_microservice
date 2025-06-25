@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /identity
+spring:
+  datasource:
+    url: ${DBMS_CONNECTION:jdbc:postgresql://localhost:5432/postgres?currentSchema=shop}
+    username: ${DBMS_USERNAME:postgres}
+    password: ${DBMS_PASSWORD:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+
+jwt:
+  signKey: "d730d799-ce02-4f45-9b45-4cba02b8723d"
+
+app:
+  services:
+    profile: localhost:8081/profiles
