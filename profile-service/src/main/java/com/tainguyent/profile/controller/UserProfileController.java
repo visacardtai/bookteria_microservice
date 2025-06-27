@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -26,5 +28,10 @@ public class UserProfileController {
     ResponseEntity<?> deleteProfile(@Valid @PathVariable("id") String id) {
         userProfileService.deleteProfile(id);
         return ResponseEntity.status(HttpStatus.OK).body("haha");
+    }
+
+    @GetMapping
+    List<UserProfileResponse> getAllProfile() {
+        return userProfileService.getAllProfile();
     }
 }
