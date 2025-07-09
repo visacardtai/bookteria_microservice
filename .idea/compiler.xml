@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="apigateway" />
       </profile>
-      <profile name="Annotation profile for project redis" enabled="true">
+      <profile name="Annotation profile for profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -23,6 +23,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="profile-service" target="24" />
+      <module name="untitled" target="24" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
